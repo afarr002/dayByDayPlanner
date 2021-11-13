@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>DbD: Day by Day Planner</title>
 </head>
 
@@ -18,14 +19,254 @@
     <header class="jumbotron">
         <h1 class="display-3">Day by Day Planner</h1>
         <p class="lead">A simple calendar app for making your way through the day.</p>
-        <p id="currentDay" class="lead"></p>
+        <hr>
+        <p id="currentDay" class="lead dateDisplay"></p>
     </header>
-    <div class="container">
-        <!-- Timeblocks go here -->
-    </div>
+
+
+    <ul class="list-group my-5 container">
+        <div class="row time-block" data-hour="9">
+            <li class="list-group-item time-block col-1 rounded" id="hour">9</li>
+            <li class="list-group-item hour col-10"><textarea class="w-100"></textarea>
+            </li>
+            <li class="list-group-item time-block col-1 rounded"><button class="saveBtn w-100 h-100">Save
+                    Event</button>
+            </li>
+        </div>
+        <div class="row time-block" data-hour="10">
+            <li class="list-group-item time-block col-1 rounded" id="hour" data-hour="9">10</li>
+            <li class="list-group-item hour col-10"><textarea class="w-100"></textarea>
+            </li>
+            <li class="list-group-item time-block col-1 rounded"><button class="saveBtn w-100 h-100">Save
+                    Event</button>
+            </li>
+        </div>
+        <div class="row time-block" data-hour="11">
+            <li class="list-group-item time-block col-1 rounded" id="hour" data-hour="9">11</li>
+            <li class="list-group-item hour col-10"><textarea class="w-100"></textarea>
+            </li>
+            <li class="list-group-item time-block col-1 rounded"><button class="saveBtn w-100 h-100">Save
+                    Event</button>
+            </li>
+        </div>
+        <div class="row time-block" data-hour="12">
+            <li class="list-group-item time-block col-1 rounded" id="hour">12</li>
+            <li class="list-group-item hour col-10"><textarea class="w-100"></textarea>
+            </li>
+            <li class="list-group-item time-block col-1 rounded"><button class="saveBtn w-100 h-100">Save
+                    Event</button>
+            </li>
+        </div>
+        <div class="row time-block" data-hour="13">
+            <li class="list-group-item time-block col-1 rounded" id="hour">1</li>
+            <li class="list-group-item hour col-10"><textarea class="w-100"></textarea>
+            </li>
+            <li class="list-group-item time-block col-1 rounded"><button class="saveBtn w-100 h-100">Save
+                    Event</button>
+            </li>
+        </div>
+        <div class="row time-block" data-hour="14">
+            <li class="list-group-item time-block col-1 rounded" id="hour">2</li>
+            <li class="list-group-item hour col-10"><textarea class="w-100"></textarea>
+            </li>
+            <li class="list-group-item time-block col-1 rounded"><button class="saveBtn w-100 h-100">Save
+                    Event</button>
+            </li>
+        </div>
+        <div class="row time-block" data-hour="15">
+            <li class="list-group-item time-block col-1 rounded" id="hour">3</li>
+            <li class="list-group-item hour col-10"><textarea class="w-100"></textarea>
+            </li>
+            <li class="list-group-item time-block col-1 rounded"><button class="saveBtn w-100 h-100">Save
+                    Event</button>
+            </li>
+        </div>
+        <div class="row time-block" data-hour="16">
+            <li class="list-group-item time-block col-1 rounded" id="hour">4</li>
+            <li class="list-group-item hour col-10"><textarea class="w-100"></textarea>
+            </li>
+            <li class="list-group-item time-block col-1 rounded"><button class="saveBtn w-100 h-100">Save
+                    Event</button>
+            </li>
+        </div>
+        <div class="row time-block" data-hour="17">
+            <li class="list-group-item time-block col-1 rounded" id="hour">5</li>
+            <li class="list-group-item hour col-10"><textarea class="w-100"></textarea>
+            </li>
+            <li class="list-group-item time-block col-1 rounded"><button class="saveBtn w-100 h-100">Save
+                    Event</button>
+            </li>
+        </div>
+    </ul>
+    <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        9
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <p class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the
+                        <code>.accordion-flush</code> class. This is the first item's accordion body.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        10
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <p class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the
+                        <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
+                        this
+                        being
+                        filled with some actual content.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        11
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <p class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the
+                        <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more
+                        exciting
+                        happening here in terms of content, but just filling up the space to make it look, at least at
+                        first
+                        glance, a bit more representative of how this would look in a real-world application.
+                    </p>
+
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        12
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample">
+                    <p class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the
+                        <code>.accordion-flush</code> class. This is the first item's accordion body.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        13
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <p class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the
+                        <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
+                        this
+                        being
+                        filled with some actual content.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        14
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                    data-bs-parent="#accordionFlushExample">
+                    <p class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the
+                        <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more
+                        exciting
+                        happening here in terms of content, but just filling up the space to make it look, at least at
+                        first
+                        glance, a bit more representative of how this would look in a real-world application.
+                    </p>
+
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        15
+                    </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+                    data-bs-parent="#accordionFlushExample">
+                    <p class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the
+                        <code>.accordion-flush</code> class. This is the first item's accordion body.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                        16
+                    </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+                    data-bs-parent="#accordionFlushExample">
+                    <p class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the
+                        <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
+                        this
+                        being
+                        filled with some actual content.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingNine">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        17
+                    </button>
+                </h2>
+                <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+                    data-bs-parent="#accordionFlushExample">
+                    <p class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
+                        the
+                        <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more
+                        exciting
+                        happening here in terms of content, but just filling up the space to make it look, at least at
+                        first
+                        glance, a bit more representative of how this would look in a real-world application.
+                    </p>
+
+                </div>
+            </div>
+
+        </div> -->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
