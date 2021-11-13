@@ -6,8 +6,9 @@ The motivation for this project was to create a day planner in which a user coul
 
 ## Application Link
 
-The link to the deployed site is -
+The link to the deployed site is - https://afarr002.github.io/dayByDayPlanner/
 
 ## Shot of Deployed Page
 
 Here is a shot of how the deployed site should load.
+<img width="1265" alt="dayByDayPlannerSreenShot" src="https://user-images.githubusercontent.com/88466341/141604574-e71196f8-f07f-448d-b7e0-157864a98a49.png">
