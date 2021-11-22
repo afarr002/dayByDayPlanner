@@ -28,7 +28,7 @@ allTimeBlock.forEach((timeblock) => {
   timeblock.querySelector(".saveBtn").addEventListener("click", (event) => {
     // get the old data
     const allData = JSON.parse(localStorage.getItem("data")) || [];
-    // get the input values hour# and texrt value
+    // get the input values hour# and text area value
     // make data entry obj
     const userDataEntry = {
       hour: hour,
@@ -57,10 +57,6 @@ allData.forEach((datum) => {
 
 // console.log(currentHour12);
 // console.log(currentHour24);
-
-//functions
-
-//event listeners
 
 //pseudo code
 
